@@ -8,18 +8,27 @@ ____
 ____
 Example:
 ```python
-import py-log
-log = py-log.Log("logs",False)
+from py-log import Log
+log = Log("logs")
 log.info("Info")
 log.warning("Warning")
 log.error("Error")
-log.personal("Title", "Text", "Color")
+log.personal("Title", "Text")
 print(log.get_today_log()) 
 ```
 Result:
+```config
+[19:50:53] [Info] Info
+[19:50:53] [Warn] Warning
+[19:50:53] [Error] Error
+[19:50:53] [Title] Text
 ```
-[19:50:53] [Info] Info              #
-[19:50:53] [Warn] Warning           #
-[19:50:53] [Error] Error            #
-[19:50:53] [Title] Text             # 
+____
+# Delete log file exemple:
+```python
+from py-log import Log
+log = Log("logs")
+log.delete_today_log()
+log.delete_log("2022-05-30")
 ```
+
