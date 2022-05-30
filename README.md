@@ -6,7 +6,9 @@ ____
 ## INSTALLATION
 ```$ pip install log-py```
 ____
-Example:
+# Exemple
+
+### Adding data to the log
 ```python
 from py-log import Log
 log = Log("logs")
@@ -16,19 +18,18 @@ log.error("Error")
 log.personal("Title", "Text")
 print(log.get_today_log()) 
 ```
-Result:
+### Result:
 ```config
 [19:50:53] [Info] Info
 [19:50:53] [Warn] Warning
 [19:50:53] [Error] Error
 [19:50:53] [Title] Text
 ```
-____
-# Log file deletion example:
+### Log file deletion example:
 ```python
 from py-log import Log
 log = Log("logs")
 log.delete_today_log()
 log.delete_log("2022-05-30")
 ```
-
+____
