@@ -24,7 +24,7 @@ Result:
 [19:50:53] [Title] Text
 ```
 ____
-# Delete log file exemple:
+# Log file deletion example:
 ```python
 from py-log import Log
 log = Log("logs")
